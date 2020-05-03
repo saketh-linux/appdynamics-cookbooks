@@ -1,4 +1,4 @@
-default['appdynamics']['machine_agent']['version'] = nil
+default['appdynamics']['machine_agent']['version'] = '4.4.1'
 default['appdynamics']['machine_agent']['source'] = nil
 default['appdynamics']['machine_agent']['use_bundled_package'] = false
 default['appdynamics']['machine_agent']['checksum'] = nil

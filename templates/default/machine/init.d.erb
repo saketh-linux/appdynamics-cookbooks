@@ -22,7 +22,7 @@ pid_file="<%= @pid_file %>"
 
 start() {
     echo -n $"Starting AppDynamics machine agent:"
-    daemon --pidfile=${pid_file} ${PROG}
+    nohup ${PROG} > /dev/null 2>&1 &
     RETVAL=$?
     echo
 }

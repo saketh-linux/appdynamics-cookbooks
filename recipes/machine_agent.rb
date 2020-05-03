@@ -42,16 +42,16 @@ directory "#{agent['install_dir']}/conf" do
   action :create
 end
 
-remote_file agent_zip do
-  source package_source
-  checksum agent['checksum']
-  backup false
-  mode '0444'
-  notifies :run, 'execute[unzip-appdynamics-machine-agent]', :immediately
-end
+#remote_file agent_zip do
+#  source package_source
+#  checksum agent['checksum']
+#  backup false
+#  mode '0444'
+#  notifies :run, 'execute[unzip-appdynamics-machine-agent]', :immediately
+#end
 
 template "#{agent['install_dir']}/run.sh" do
-  cookbook agent['run_sh']['cookbook']
+#  cookbook agent['run_sh']['cookbook']
   source agent['run_sh']['source']
   owner agent['owner']
   group agent['group']
@@ -70,7 +70,7 @@ execute 'unzip-appdynamics-machine-agent' do
 end
 
 template agent['init_script'] do
-  cookbook agent['init']['cookbook']
+#  cookbook agent['init']['cookbook']
   source agent['init']['source']
   variables(
     :install_dir => agent['install_dir'],
@@ -82,7 +82,7 @@ template agent['init_script'] do
 end
 
 template "#{agent['install_dir']}/conf/controller-info.xml" do
-  cookbook agent['template']['cookbook']
+#  cookbook agent['template']['cookbook']
   source agent['template']['source']
   owner agent['owner']
   group agent['group']

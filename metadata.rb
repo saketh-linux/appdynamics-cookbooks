@@ -1,4 +1,4 @@
-name              'appdynamics'
+name              'appdynamics-cookbooks'
 version           '0.4.0'
 
 maintainer        'AppDynamics'
@@ -8,13 +8,13 @@ long_description  IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 source_url        'https://github.com/appdynamics/appdynamics-cookbooks'        if respond_to?(:source_url)
 issues_url        'https://github.com/appdynamics/appdynamics-cookbooks/issues' if respond_to?(:issues_url)
 
-depends 'windows', '>= 1.44.3'
-depends 'python', '~> 1.4.6'
-depends 'nodejs', '~> 2.4.4'
-depends 'java', '~> 1.42.0'
-depends 'apt', '~> 3.0.0'
-depends 'powershell', '~> 3.0.0'
-depends 'ark', '~> 1.1.0'
+#depends 'windows', '>= 1.44.3'
+#depends 'python', '~> 1.4.6'
+#depends 'nodejs', '~> 2.4.4'
+#depends 'java', '~> 1.42.0'
+#depends 'apt', '~> 3.0.0'
+#depends 'powershell', '~> 3.0.0'
+#depends 'ark', '~> 1.1.0'
 
 # Red Hat
 supports 'amazon'
